@@ -35,17 +35,17 @@ const posts = [
 export default function InsightsPage() {
   return (
     <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <Reveal>
+      <Reveal variant="blur">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-violet-300/90">
           Writing
         </p>
       </Reveal>
-      <Reveal delay={0.06} className="mt-4">
+      <Reveal variant="scale" delay={0.06} className="mt-4">
         <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Insights
         </h1>
       </Reveal>
-      <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
+      <Reveal variant="fadeUp" delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
         Short articles — wire these slugs to a CMS or MDX when you are ready.
       </Reveal>
 

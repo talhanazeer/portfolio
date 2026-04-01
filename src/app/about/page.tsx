@@ -35,17 +35,17 @@ const education = [
 export default function AboutPage() {
   return (
     <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <Reveal>
+      <Reveal variant="blur">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-violet-300/90">
           About
         </p>
       </Reveal>
-      <Reveal delay={0.06} className="mt-4">
+      <Reveal variant="scale" delay={0.06} className="mt-4">
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Full stack focus, end-to-end delivery.
         </h1>
       </Reveal>
-      <Reveal delay={0.1} className="mt-8 max-w-2xl space-y-5">
+      <Reveal variant="fadeUp" delay={0.1} className="mt-8 max-w-2xl space-y-5">
         {bullets.map((t) => (
           <p key={t} className="text-lg leading-relaxed text-zinc-400">
             {t}

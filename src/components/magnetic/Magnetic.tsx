@@ -7,6 +7,7 @@ import {
   type SpringOptions,
 } from "framer-motion";
 import { useRef } from "react";
+import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
 const defaultSpring: SpringOptions = {
   stiffness: 280,
@@ -30,19 +31,22 @@ export function Magnetic({
   spring = defaultSpring,
 }: MagneticProps) {
   const ref = useRef<HTMLDivElement>(null);
+  const reduced = usePrefersReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const sX = useSpring(x, spring);
   const sY = useSpring(y, spring);
+  const pull = reduced ? 0 : strength;
 
   const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (reduced) return;
     const el = ref.current;
     if (!el) return;
     const { left, top, width, height } = el.getBoundingClientRect();
     const cx = left + width / 2;
     const cy = top + height / 2;
-    x.set((e.clientX - cx) * strength);
-    y.set((e.clientY - cy) * strength);
+    x.set((e.clientX - cx) * pull);
+    y.set((e.clientY - cy) * pull);
   };
 
   const reset = () => {

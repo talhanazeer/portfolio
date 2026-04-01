@@ -8,17 +8,17 @@ import { site } from "@/lib/constants";
 export default function ContactPage() {
   return (
     <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <Reveal>
+      <Reveal variant="blur">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-cyan-300/90">
           Contact
         </p>
       </Reveal>
-      <Reveal delay={0.06} className="mt-4">
+      <Reveal variant="scale" delay={0.06} className="mt-4">
         <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Let&apos;s talk about your next build.
         </h1>
       </Reveal>
-      <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
+      <Reveal variant="fadeUp" delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
         Reach out by email, phone, or the form below. Wire the form to your
         preferred backend when you are ready.
       </Reveal>

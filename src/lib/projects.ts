@@ -281,3 +281,5 @@ export const projects = [
     url: "https://thecheapeastflight.co.uk/",
   },
 ] as const;
+
+export type Project = (typeof projects)[number];

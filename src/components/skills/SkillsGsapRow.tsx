@@ -4,23 +4,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
+import { marqueeSkills } from "@/lib/skills-data";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const SKILLS = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "PHP",
-  "Laravel",
-  "MySQL",
-  "Bootstrap",
-  "Responsive design",
-  "WAMP",
-  "CKFinder",
-  "Cross-browser",
-  "Performance",
-];
 
 export function SkillsGsapRow() {
   const reduced = usePrefersReducedMotion();
@@ -55,7 +41,7 @@ export function SkillsGsapRow() {
     return () => ctx.revert();
   }, [reduced]);
 
-  const items = [...SKILLS, ...SKILLS];
+  const items = [...marqueeSkills, ...marqueeSkills];
 
   return (
     <div
@@ -63,7 +49,7 @@ export function SkillsGsapRow() {
       className="relative -mx-5 overflow-hidden py-10 md:-mx-8"
     >
       <p className="mb-6 px-5 text-xs font-medium uppercase tracking-[0.2em] text-zinc-500 md:px-8">
-        Scroll-driven marquee · GSAP ScrollTrigger
+        Stack at a glance · scroll-driven marquee
       </p>
       <div ref={trackRef} className="flex w-max gap-4 px-5 md:gap-5 md:px-8">
         {items.map((label, i) => (

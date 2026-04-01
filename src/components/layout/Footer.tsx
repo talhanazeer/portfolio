@@ -1,14 +1,26 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { Magnetic } from "@/components/magnetic/Magnetic";
 import { nav, site, socials } from "@/lib/constants";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const reduced = useReducedMotion();
 
   return (
-    <footer className="mt-auto border-t border-white/[0.06] bg-[#050506]">
+    <footer className="relative mt-auto overflow-hidden border-t border-white/[0.06] bg-[#050506]">
+      <motion.div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent"
+        animate={reduced ? { opacity: 0.75 } : { opacity: [0.35, 0.95, 0.35] }}
+        transition={
+          reduced
+            ? { duration: 0 }
+            : { duration: 5, repeat: Infinity, ease: "easeInOut" }
+        }
+      />
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-2 md:px-8 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <p className="text-lg font-semibold text-white">{site.name}</p>

@@ -3,16 +3,34 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Magnetic } from "@/components/magnetic/Magnetic";
 import { nav, site } from "@/lib/constants";
 
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.06] bg-[#060607]/75 backdrop-blur-xl">
+    <motion.header
+      className="fixed left-0 right-0 top-0 z-50 border-b border-white/[0.06] backdrop-blur-xl"
+      initial={false}
+      animate={{
+        backgroundColor: scrolled ? "rgba(6, 6, 7, 0.92)" : "rgba(6, 6, 7, 0.72)",
+        boxShadow: scrolled
+          ? "0 12px 48px -20px rgba(34, 211, 238, 0.12), 0 1px 0 rgba(255,255,255,0.06)"
+          : "0 0 0 rgba(0,0,0,0)",
+      }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <Magnetic strength={0.28} className="inline-flex">
           <Link
@@ -123,6 +141,6 @@ export function Header() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

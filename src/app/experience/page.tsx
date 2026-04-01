@@ -40,17 +40,17 @@ const timeline = [
 export default function ExperiencePage() {
   return (
     <div className="relative mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-      <Reveal>
+      <Reveal variant="blur">
         <p className="text-xs font-medium uppercase tracking-[0.25em] text-violet-300/90">
           Journey
         </p>
       </Reveal>
-      <Reveal delay={0.06} className="mt-4">
+      <Reveal variant="scale" delay={0.06} className="mt-4">
         <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
           Experience
         </h1>
       </Reveal>
-      <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
+      <Reveal variant="fadeUp" delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
         From responsive UI at Emenac to full-stack Laravel and PHP delivery at
         Cbrix — always with performance and security in mind.
       </Reveal>
