@@ -4,25 +4,38 @@ import { SkillsGsapRow } from "@/components/skills/SkillsGsapRow";
 
 export const metadata: Metadata = {
   title: "Skills",
-  description: "Tools, stack, and craft — including scroll-driven motion demos.",
+  description:
+    "Frontend, backend, and integration — HTML, CSS, JavaScript, PHP, Laravel, MySQL, and more.",
 };
 
 const groups = [
   {
     title: "Frontend",
-    items: ["React 19", "Next.js App Router", "TypeScript", "Tailwind v4"],
-  },
-  {
-    title: "Motion",
-    items: ["Framer Motion", "GSAP + ScrollTrigger", "Lenis smooth scroll"],
+    items: [
+      "Frontend development",
+      "Responsive web design",
+      "Bootstrap (latest)",
+      "Cross-browser compatibility",
+      "HTML, CSS, JavaScript",
+    ],
   },
   {
     title: "Backend & data",
-    items: ["Node.js", "REST & tRPC", "Postgres", "Edge functions"],
+    items: [
+      "Backend development",
+      "Core PHP",
+      "Laravel",
+      "MySQL database management",
+      "Integration of frontend and backend systems",
+    ],
   },
   {
-    title: "Delivery",
-    items: ["Vercel", "GitHub Actions", "ESLint", "Playwright smoke tests"],
+    title: "Stack & tooling",
+    items: ["WAMP", "CKFinder integration"],
+  },
+  {
+    title: "Quality",
+    items: ["Optimization techniques", "Performance-focused delivery", "Secure data handling"],
   },
 ];
 
@@ -40,8 +53,8 @@ export default function SkillsPage() {
         </h1>
       </Reveal>
       <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
-        This page pairs Framer Motion reveals with a GSAP scrubbed marquee tied
-        to scroll — two animation systems, one coherent experience.
+        Core stack for client sites and internal apps — from responsive UI to
+        Laravel-backed APIs and MySQL.
       </Reveal>
 
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

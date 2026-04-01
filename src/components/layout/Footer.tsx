@@ -45,8 +45,9 @@ export function Footer() {
                 <Magnetic strength={0.25} className="inline-flex">
                   <a
                     href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(s.href.startsWith("mailto:")
+                      ? {}
+                      : { target: "_blank", rel: "noopener noreferrer" })}
                     className="text-sm text-zinc-400 transition-colors hover:text-white"
                   >
                     {s.label}

@@ -1,9 +1,11 @@
 export const site = {
-  name: "Alex Dev",
-  title: "Creative Developer",
-  tagline: "Building interfaces that feel magnetic — precise motion, calm clarity.",
-  email: "hello@example.com",
-  location: "Remote · Earth",
+  name: "Talha Nazeer",
+  title: "Full Stack Developer",
+  tagline:
+    "Experienced web developer passionate about crafting exceptional digital experiences — robust, secure, and high-performance apps across frontend and backend.",
+  email: "talhanazeer91m@gmail.com",
+  phone: "+923068004554",
+  location: "Lahore, Pakistan",
 } as const;
 
 export const nav = [
@@ -17,7 +19,8 @@ export const nav = [
 ] as const;
 
 export const socials = [
-  { href: "https://github.com", label: "GitHub" },
-  { href: "https://linkedin.com", label: "LinkedIn" },
-  { href: "https://twitter.com", label: "Twitter" },
+  {
+    href: "mailto:talhanazeer91m@gmail.com",
+    label: "Email",
+  },
 ] as const;

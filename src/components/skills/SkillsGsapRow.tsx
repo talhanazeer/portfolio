@@ -8,18 +8,18 @@ import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 gsap.registerPlugin(ScrollTrigger);
 
 const SKILLS = [
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node",
-  "PostgreSQL",
-  "Figma",
-  "Framer Motion",
-  "GSAP",
-  "Tailwind CSS",
-  "WebGL",
-  "CI/CD",
-  "Vercel",
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "PHP",
+  "Laravel",
+  "MySQL",
+  "Bootstrap",
+  "Responsive design",
+  "WAMP",
+  "CKFinder",
+  "Cross-browser",
+  "Performance",
 ];
 
 export function SkillsGsapRow() {

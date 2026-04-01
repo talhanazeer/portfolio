@@ -6,16 +6,16 @@ import { site } from "@/lib/constants";
 
 const highlights = [
   {
-    title: "Product surfaces",
-    body: "Design systems, dashboards, and marketing sites that stay fast and accessible.",
+    title: "Full stack delivery",
+    body: "HTML, CSS, JavaScript on the client; PHP, Laravel, and MySQL on the server — integrated end to end.",
   },
   {
-    title: "Motion craft",
-    body: "Magnetic interactions, scroll storytelling, and spring-tuned micro-feedback.",
+    title: "Performance & scale",
+    body: "Optimization habits from real traffic: faster pages, sensible queries, and maintainable structure.",
   },
   {
-    title: "Ship-ready",
-    body: "Typed Next.js, CI checks, and docs so Vercel deploys stay boring—in the best way.",
+    title: "Travel & landing expertise",
+    body: "Dozens of live UK, CA, and global travel, flight, and Umrah sites — see Work for links.",
   },
 ];
 
@@ -32,11 +32,11 @@ export default function HomePage() {
         </Reveal>
         <Reveal delay={0.06} className="mt-6">
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Interfaces with{" "}
+            Web apps that are{" "}
             <span className="bg-gradient-to-r from-cyan-300 via-white to-violet-300 bg-clip-text text-transparent">
-              magnetic
-            </span>{" "}
-            polish.
+              fast
+            </span>
+            , secure, and built to last.
           </h1>
         </Reveal>
         <Reveal delay={0.12} className="mt-8 max-w-2xl">

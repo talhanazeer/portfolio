@@ -15,12 +15,12 @@ export default function ContactPage() {
       </Reveal>
       <Reveal delay={0.06} className="mt-4">
         <h1 className="text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Let&apos;s build something magnetic.
+          Let&apos;s talk about your next build.
         </h1>
       </Reveal>
       <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
-        For a production contact flow, wire this form to Vercel serverless,
-        Resend, or Formspark. The layout is ready — swap the handler only.
+        Reach out by email, phone, or the form below. Wire the form to your
+        preferred backend when you are ready.
       </Reveal>
 
       <Reveal delay={0.14} className="mt-14 grid gap-10 lg:grid-cols-5">
@@ -82,6 +82,14 @@ export default function ContactPage() {
                 className="text-lg font-medium text-white hover:text-cyan-200"
               >
                 {site.email}
+              </a>
+            </Magnetic>
+            <Magnetic strength={0.35} className="mt-4 inline-flex">
+              <a
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                className="text-base font-medium text-white hover:text-cyan-200"
+              >
+                {site.phone}
               </a>
             </Magnetic>
             <p className="mt-2 text-sm text-zinc-500">{site.location}</p>

@@ -22,7 +22,7 @@ export function Header() {
             <span className="bg-gradient-to-r from-cyan-200 to-violet-300 bg-clip-text text-transparent">
               {site.name}
             </span>
-            <span className="text-white/40"> ·</span> Studio
+            <span className="text-white/40"> ·</span> Portfolio
           </Link>
         </Magnetic>
 

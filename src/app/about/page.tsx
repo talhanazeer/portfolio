@@ -9,9 +9,27 @@ export const metadata: Metadata = {
 };
 
 const bullets = [
-  "10+ years shaping web products across startups and agencies.",
-  "Believe the best UI feels inevitable: clear hierarchy, honest motion, no gimmicks.",
-  "Currently focused on React ecosystems, design tokens, and edge-deployed apps.",
+  "I'm an experienced web developer passionate about crafting exceptional digital experiences.",
+  "My expertise spans frontend and backend technologies — robust, secure, and high-performance applications.",
+  "I care about responsive UI, solid database design, and shipping maintainable Laravel and PHP systems.",
+];
+
+const education = [
+  {
+    period: "Expected 12/2027",
+    title: "Computer Science",
+    org: "Virtual University of Pakistan · Lahore",
+  },
+  {
+    period: "12/2024",
+    title: "Computer Science (PUCIT)",
+    org: "PUCIT · Lahore",
+  },
+  {
+    period: "09/2020",
+    title: "F.Sc — Intermediate",
+    org: "Daanish Boys School · Rahim Yar Khan",
+  },
 ];
 
 export default function AboutPage() {
@@ -24,7 +42,7 @@ export default function AboutPage() {
       </Reveal>
       <Reveal delay={0.06} className="mt-4">
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          Calm craft, intentional motion.
+          Full stack focus, end-to-end delivery.
         </h1>
       </Reveal>
       <Reveal delay={0.1} className="mt-8 max-w-2xl space-y-5">
@@ -34,6 +52,26 @@ export default function AboutPage() {
           </p>
         ))}
       </Reveal>
+      <Reveal delay={0.14} className="mt-16">
+        <p className="text-xs font-medium uppercase tracking-[0.25em] text-violet-300/90">
+          Education
+        </p>
+        <ul className="mt-6 max-w-2xl space-y-6">
+          {education.map((e) => (
+            <li
+              key={e.title + e.period}
+              className="border-b border-white/[0.06] pb-6 last:border-0 last:pb-0"
+            >
+              <p className="text-xs font-mono uppercase tracking-wider text-cyan-300/80">
+                {e.period}
+              </p>
+              <h2 className="mt-2 text-lg font-semibold text-white">{e.title}</h2>
+              <p className="mt-1 text-sm text-zinc-500">{e.org}</p>
+            </li>
+          ))}
+        </ul>
+      </Reveal>
+
       <Reveal delay={0.16} className="mt-12">
         <Magnetic strength={0.4} className="inline-flex">
           <a

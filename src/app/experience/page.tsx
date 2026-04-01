@@ -3,35 +3,36 @@ import { Reveal } from "@/components/animations/Reveal";
 
 export const metadata: Metadata = {
   title: "Experience",
-  description: "Roles, impact, and how teams collaborated over time.",
+  description:
+    "Full stack and backend roles — Cbrix, Emenac.inc — Laravel, PHP, and scalable web apps.",
 };
 
 const timeline = [
   {
-    period: "2023 — Present",
-    title: "Principal frontend engineer",
-    org: "Northwind Labs",
+    period: "10/2022 — Present",
+    title: "Full Stack Developer",
+    org: "Cbrix · Lahore",
     points: [
-      "Own design system + Next.js app shell used by 8 product squads.",
-      "Cut p95 LCP by 38% via streaming, image pipeline, and font strategy.",
+      "Designed and implemented frontend and backend solutions using HTML, CSS, JavaScript, PHP, MySQL, and Laravel.",
+      "Focused on performance optimization and scalability in applications.",
     ],
   },
   {
-    period: "2019 — 2023",
-    title: "Senior UI engineer",
-    org: "Compound Studio",
+    period: "06/2021 — 10/2022",
+    title: "Backend Developer",
+    org: "Emenac.inc · Lahore",
     points: [
-      "Partnered with brand and PM to launch 20+ marketing and product surfaces.",
-      "Introduced Framer Motion + GSAP motion guidelines for the team.",
+      "Developed server-side systems ensuring database integrity, performance, and security.",
+      "Conducted code reviews and addressed complex technical challenges.",
     ],
   },
   {
-    period: "2015 — 2019",
-    title: "Frontend developer · Design hybrid",
-    org: "Various / Freelance",
+    period: "10/2019 — 06/2021",
+    title: "Frontend Developer",
+    org: "Emenac.inc · Lahore",
     points: [
-      "Shipped interactive campaigns and SPAs for fintech and culture clients.",
-      "Established component libraries ahead of mainstream Storybook adoption.",
+      "Built responsive and user-friendly interfaces using HTML, CSS, JavaScript, and Bootstrap.",
+      "Delivered seamless experiences across diverse devices and platforms.",
     ],
   },
 ];
@@ -50,8 +51,8 @@ export default function ExperiencePage() {
         </h1>
       </Reveal>
       <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
-        A concise timeline — each chapter narrowed the gap between design intent
-        and shipped pixels.
+        From responsive UI at Emenac to full-stack Laravel and PHP delivery at
+        Cbrix — always with performance and security in mind.
       </Reveal>
 
       <ol className="relative mt-20 space-y-0 border-l border-white/10 pl-8 md:pl-12">

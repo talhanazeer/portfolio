@@ -2,42 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/animations/Reveal";
 import { Magnetic } from "@/components/magnetic/Magnetic";
+import { projects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Work",
-  description: "Selected projects — product UI, brands, and technical highlights.",
+  description:
+    "Live travel, flight, and pilgrimage sites — Laravel, PHP, and full-stack delivery.",
 };
-
-const projects = [
-  {
-    title: "Nebula Analytics",
-    role: "Lead frontend",
-    year: "2025",
-    tags: ["Next.js", "Charts", "Auth"],
-    desc: "Real-time dashboards with optimistic UI and role-aware layouts.",
-  },
-  {
-    title: "Lumen Commerce",
-    role: "Design engineering",
-    year: "2024",
-    tags: ["Stripe", "A/B", "Perf"],
-    desc: "Headless storefront with sub-second LCP on mobile networks.",
-  },
-  {
-    title: "Atlas Atlas",
-    role: "Solo build",
-    year: "2024",
-    tags: ["Maps", "WebGL", "API"],
-    desc: "Explorable map layer with smooth camera easing and magnetic UI chrome.",
-  },
-  {
-    title: "Signal Journal",
-    role: "Product partner",
-    year: "2023",
-    tags: ["React", "PWA", "Offline"],
-    desc: "Field notes app with resilient sync and tactile motion language.",
-  },
-];
 
 export default function WorkPage() {
   return (
@@ -53,8 +24,8 @@ export default function WorkPage() {
         </h1>
       </Reveal>
       <Reveal delay={0.1} className="mt-4 max-w-xl text-lg text-zinc-400">
-        Hover on cards — magnetic framing highlights depth without stealing focus
-        from the narrative.
+        Production sites for UK, Canadian, and global travel brands — landing
+        pages, booking funnels, and content-heavy portals.
       </Reveal>
 
       <ul className="mt-16 space-y-6">
@@ -84,9 +55,14 @@ export default function WorkPage() {
                     </ul>
                   </div>
                   <p className="mt-5 max-w-2xl text-zinc-400">{p.desc}</p>
-                  <p className="mt-4 text-sm font-medium text-cyan-300/90">
-                    Case study coming soon →
-                  </p>
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex text-sm font-medium text-cyan-300/90 transition-colors hover:text-cyan-200"
+                  >
+                    Visit site →
+                  </a>
                 </article>
               </Magnetic>
             </li>
