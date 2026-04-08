@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next"
 import { Outfit, JetBrains_Mono } from "next/font/google";
 import { AmbientBackdrop } from "@/components/ambient/AmbientBackdrop";
 import { ClientProviders } from "@/components/providers/ClientProviders";
@@ -68,6 +69,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </ClientProviders>
+        <Analytics />
       </body>
     </html>
   );
